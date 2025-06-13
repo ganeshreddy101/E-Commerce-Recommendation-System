@@ -33,15 +33,23 @@ Constructed a User-Product Interaction Matrix.
 
 Filtered users/products with very few ratings to improve matrix quality.
 
-4.Model Building
+4. Model Evaluation & Accuracy
 
-Used K-Nearest Neighbors (KNN) with cosine similarity.
+To predict product ratings and generate personalized recommendations, five regression models were tested and evaluated using Root Mean Squared Error (RMSE):
 
-Model recommends items based on similarity between users and items.
+Model	RMSE
 
-5.Evaluation
+~ LightGBM Regressor: 0.960
 
-Used precision-based inspection for relevance of top-N recommendations.
+~ XGBoost Regressor: 0.968
 
-Insights into model limitations due to cold-start problems and sparse interactions.
+~ Random Forest Regressor: 0.999
 
+~ Ridge Regression: 0.971
+
+~ Support Vector Regression: 1.132
+
+
+Best Model: LightGBM with the lowest RMSE, selected for final recommendations.
+
+These models help predict how likely a user is to rate a product highly. The predicted ratings are then used to recommend the Top-N most relevant products to each user.
