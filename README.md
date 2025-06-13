@@ -33,7 +33,7 @@ Constructed a User-Product Interaction Matrix.
 
 Filtered users/products with very few ratings to improve matrix quality.
 
-4. Model Evaluation & Accuracy
+4.Model Evaluation & Accuracy
 
 To predict product ratings and generate personalized recommendations, five regression models were tested and evaluated using Root Mean Squared Error (RMSE):
 
